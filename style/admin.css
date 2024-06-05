@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 110px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #ecdbba;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: rgba(25, 25, 25, 255);
+}
+
+.sidebar:hover {
+  width: 240px;
+  transition: 0.5s;
+}
+
+.logo {
+  height: 80px;
+  padding: 16px;
+}
+
+.menu {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 1rem;
+  margin: 8px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+  background: #e0e0e058;
+}
+
+.menu a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu a span {
+  overflow: hidden;
+}
+
+.menu a i {
+  font-size: 1.2rem;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/**** MAIN BODY ****/
+
+.main-content {
+  position: relative;
+  background: #2d4263;
+  width: 100%;
+  padding: 1rem;
+}
+
+.header-wrapper img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #ecdbba;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 1rem;
+}
+
+.header-title {
+  color: rgba(25, 25, 25, 255);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search {
+  background: rgb(237, 237, 237);
+  border-radius: 15px;
+  color: rgba(25, 25, 25, 255);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+}
+
+.search input {
+  background: transparent !important;
+  padding: 10px;
+}
+
+.search i {
+  font-size: 1.2rem;
+  cursor: pointer !important;
+  transition: all 0.5s ease-out;
+}
+
+.search i:hover {
+  transform: scale(1.2);
+}
+
+.main-title {
+  margin-bottom: 8px;
+  color: #ecdbba;
+}
+
+.tabel-wrapper {
+  background: #191919;
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.tabel-container {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse !important;
+}
+
+thead {
+  background: rgba(236, 219, 186, 255);
+  color: #191919;
+}
+
+th {
+  padding: 15px;
+  text-align: left;
+}
+
+tbody {
+  background: #f2f2f2;
+}
+
+td {
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background: whitesmoke;
+}
+
+tfoot {
+  background: rgba(236, 219, 186, 255);
+  font-weight: bold !important;
+  color: #191919;
+}
+
+tfoot td {
+  padding: 15px;
+  color: white !important;
+}
+
+/* Gaya untuk tombol Edit */
+.edit-button {
+  background-color: #4caf50; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px; /* Padding */
+  font-size: 14px; /* Ukuran font */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transisi hover */
+}
+
+.edit-button:hover {
+  background-color: #45a049; /* Warna latar belakang saat hover */
+}
+
+/* Gaya untuk tombol Remove */
+.remove-button {
+  background-color: #f44336; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px; /* Padding */
+  font-size: 14px; /* Ukuran font */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transisi hover */
+}
+
+.remove-button:hover {
+  background-color: #f44336; /* Warna latar belakang saat hover */
+}
+
+/* Penyesuaian tata letak responsif */
+.button-container {
+  display: flex;
+  align-items: center; /* Menengahkan tombol di tengah secara vertikal */
+  gap: 10px; /* Jarak antara tombol */
+}
+
+.move-button {
+  background-color: #3366ff; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 10px; /* Padding */
+  font-size: 14px; /* Ukuran font */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transisi hover */
+  margin-bottom: 14px; /* Jarak antara tombol dengan tabel */
+  margin-top: 8px;
+}
+
+.move-button:hover {
+  background-color: #2554b3; /* Warna latar belakang saat hover */
+}
+
+/* Penyesuaian tata letak responsif */
+@media screen and (max-width: 600px) {
+  .button-container {
+    flex-direction: column; /* Mengubah tata letak menjadi kolom pada layar kecil */
+    width: 100%; /* Lebar penuh */
+    align-items: flex-start; /* Menempatkan tombol di sebelah kiri pada layar kecil */
+  }
+}
+
+/**** INPUT DATA ****/
+/* Gaya untuk input box */
+.form-group {
+  margin-bottom: 20px;
+  color: #ecdbba;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
